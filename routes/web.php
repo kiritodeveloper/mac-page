@@ -10,7 +10,96 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('home');
+    return view('inicio.home');
+});
+
+Route::get('home', function () {
+    return view('inicio.home');
+});
+Route::get('trabajo',function(){
+	return view('trabajos.mas');
+});
+Route::get('hostin',function(){
+	return view('planes.planes');
+});
+
+Route::get('contact',function(){
+	return view('contactanos.contact');
+});
+Route::get('porco',function(){
+	return view('desarrollosof/porco');
+});
+Route::get('huayna',function(){
+	return view('desarrollosof.huayna');
+});
+Route::get('digitalizacion',function(){
+	return view('desarrollosof.digitalizacion');
+});
+Route::get('camaras',function(){
+	return view('instalacion.camaras');
+});
+Route::get('today',function(){
+	return view('camaras.today');
+});
+Route::get('today1',function(){
+	return view('camaras.today1');
+});
+Route::get('clientes',function(){
+	return view('clientes.clientes');
+});
+Route::get('bio',function(){
+	return view('camaras.bio');
+});
+Route::get('install',function(){
+	return view('camaras.install');
+});
+
+Route::get('redes',function(){
+	return view('camaras.redes');
+});
+Route::get('vp',function(){
+	return view('camaras.vp');
+});
+
+
+
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>Cache facade value cleared</h1>';
+});
+
+//Reoptimized class loader:
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return '<h1>Reoptimized class loader</h1>';
+});
+
+//Route cache:
+Route::get('/route-cache', function() {
+    $exitCode = Artisan::call('route:cache');
+    return '<h1>Routes cached</h1>';
+});
+
+//Clear Route cache:
+Route::get('/route-clear', function() {
+    $exitCode = Artisan::call('route:clear');
+    return '<h1>Route cache cleared</h1>';
+});
+
+//Clear View cache:
+Route::get('/view-clear', function() {
+    $exitCode = Artisan::call('view:clear');
+    return '<h1>View cache cleared</h1>';
+});
+
+//Clear Config cache:
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return '<h1>Clear Config cleared</h1>';
+});
+//Clear migrar:
+Route::get('/migrate', function() {
+    $exitCode = Artisan::call('migrate');
+    return '<h1>migrando datos ...</h1>';
 });
