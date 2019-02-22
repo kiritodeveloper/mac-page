@@ -61,6 +61,10 @@ Route::get('redes',function(){
 Route::get('vp',function(){
 	return view('camaras.vp');
 });
+Route::get('games',function(){
+    return view('games.index');
+});
+
 
 
 

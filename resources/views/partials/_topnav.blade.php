@@ -28,6 +28,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li class="nav-item"><a class="nav-link" href="trabajo">desarrollo de software</a></li>
                          <li class="nav-item"><a class="nav-link" href="camaras">area de instalacion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games">games</a></li>
                     </ul>
               
                 <li class="nav-item"><a class="nav-link" href="contact">Contacnos</a></li>
