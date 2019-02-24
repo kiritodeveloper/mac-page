@@ -62,7 +62,13 @@ Route::get('vp',function(){
 	return view('camaras.vp');
 });
 Route::get('games',function(){
+    return view('games.portada');
+});
+Route::get('gamesppt',function(){
     return view('games.index');
+});
+Route::get('gameschess',function(){
+    return view('games.ajedres');
 });
 
 

@@ -47,11 +47,13 @@
 			</div>
        	</div>
        	<br>
-    	<br>
-    	<br>
-    	<br>
-    	<br>
-    	<br>
     </section>
    <script src="js/app1.js"></script>
+   <section class="main_slider_area">
+<br>
+<br>
+<br>
+
+</section>
+
 @endsection
