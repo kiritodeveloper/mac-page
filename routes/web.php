@@ -10,13 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('index', function () {
+    return view('index');
+});
 Route::get('/', function () {
     return view('inicio.home');
 });
 
-Route::get('home', function () {
-    return view('inicio.home');
-});
 Route::get('trabajo',function(){
 	return view('trabajos.mas');
 });
@@ -112,4 +112,25 @@ Route::get('/config-cache', function() {
 Route::get('/migrate', function() {
     $exitCode = Artisan::call('migrate');
     return '<h1>migrando datos ...</h1>';
+});
+Auth::routes();
+Route::group(['middleware'=>'auth'],function (){
+
+    Route::get('usuarios', 'UserController@index')
+        ->name('users.index');
+    
+    Route::get('/usuarios/{user}', 'UserController@show')
+        ->where('user', '[0-9]+')
+        ->name('users.show');
+    
+    Route::get('nuevo', 'UserController@create')->name('users.create');
+    
+    Route::post('usuarios', 'UserController@store');
+    
+    Route::get('{user}', 'UserController@edit')->name('users.edit');
+    
+    Route::put('{user}', 'UserController@update');
+        
+    Route::delete('{user}', 'UserController@destroy')->name('users.destroy');
+    
 });
